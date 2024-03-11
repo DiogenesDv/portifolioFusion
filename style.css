@@ -1,0 +1,136 @@
+/************************Padrões Gerais da Pagina ***********************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ .topo { grid-area: header; }
+.corpo { grid-area: main; }
+.rodape { grid-area: footer; }
+
+.layout{
+    display: grid;
+    grid-template-areas:
+    'header header header header'
+    'main main main main'
+    'footer footer footer footer';
+    background-color: #e1dfdf;
+    /* overflow-x: hidden; */
+}
+
+header{
+    width: 100vw;
+    height: 8vh;
+    background: #d2d2d2;
+    box-shadow: 0px 1px 10px #303030;
+    
+}
+main{
+    width: 100vw;   
+    
+}
+footer{
+    width:100vw;
+    height: 12vh;
+}
+/****************************************************************/
+
+/************************Menu************************************/
+@keyframes background-Fundo{
+	0%{background-color: #ffffff;}
+	50%{background-color: #161616;}
+	100%{background-color: #ffffff;}	
+}
+
+#logo{
+    color: rgb(3, 59, 149);
+	font-family: 'Silkscreen', cursive;
+	font-size: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    animation: background-Fundo 5s infinite;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px black;
+    cursor: default;
+}
+
+.topo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    cursor: default;
+}
+
+/****************************************************************/
+
+/***************************Corpo********************************/
+.textoTopo{
+	display: flex;
+	flex-direction: column;
+    align-items: center;	
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color:  #232323;
+	margin: auto;
+}
+
+#imgEu{
+    width: 300px;
+    border-radius: 35px;
+    box-shadow: 0px 0px 10px rgb(51, 51, 51);
+}
+
+.containerSobre{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.txtApresentacao{
+    width: 50vw;
+}
+
+.txtApresentacao h2{
+    color: #232323;
+    margin-bottom: 5px;
+}
+
+.txtApresentacao p{
+    color:  #232323;
+    text-shadow: 0px 0px 40px black;
+    font-style: oblique;
+    text-align: justify;
+    line-height: 20px;
+    
+}
+/***************************************************************/
+
+/*************************Rodape********************************/
+
+.rodape{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #d2d2d2;
+    box-shadow: 0px 1px 10px #303030;
+    margin-top: 50px;
+}
+
+.rodapeRedessociais{
+    display: flex;  
+}
+
+.redesSociais a{
+    margin-left: 5px;
+}
+
+.redesSociais a i{
+    color: #034b99;
+}
+
+.RodapenomeFinal{
+    margin-top: 10px;
+    font-weight: 600;
+}
