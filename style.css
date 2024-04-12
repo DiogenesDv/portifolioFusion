@@ -4,21 +4,21 @@
     padding: 0;
     box-sizing: border-box;
 }
- .topo { grid-area: header; }
+ .topo { grid-area: nav; }
 .corpo { grid-area: main; }
 .rodape { grid-area: footer; }
 
 .layout{
     display: grid;
     grid-template-areas:
-    'header header header header'
+    'nav nav nav nav'
     'main main main main'
     'footer footer footer footer';
     background-color: #ffffff;
     /* overflow-x: hidden; */
 }
 
-header{
+nav{
     width: 100vw;
     height: 8vh;
     background: #d2d2d2;
@@ -27,6 +27,7 @@ header{
 }
 main{
     width: 100vw;   
+    background: linear-gradient(1deg,#fff, #8dbef2);
 }
 footer{
     width:100vw;
@@ -60,6 +61,96 @@ footer{
     justify-content: space-around;
     cursor: default;
 }
+
+.glow{
+    user-select: none;
+}
+
+.btnElinksMenu{
+    display: flex;
+    width: 30%;
+    background: linear-gradient(1deg,#fff, #8dbef2);
+    box-shadow: 0px 0px 5px black, 0px 0px 10px rgb(0, 251, 251) ;
+    justify-content: space-evenly;
+    border-radius: 20px;
+}
+.nome{
+    color: #303030;
+}
+
+.menuIcon{
+    cursor: pointer;
+    text-transform: uppercase;
+    padding-top: 2px;
+    font-weight: bold;
+    background: #8dbef2;
+    height: 80%;
+    margin-top: 2px;
+    padding: 2px;
+    font-size: 1.3rem;
+    box-shadow: 0px 0px 5px black, 0px 0px 5px rgb(0, 251, 251) ;
+    
+}
+
+.menuIcon:hover{
+    box-shadow: 0px 0px 10px #8dbef2;
+    transition: .3s;
+}
+
+.menuDropdown.ativo{
+    opacity: 1;
+    visibility: visible;
+}
+
+.menuDropdown{
+    position: absolute;
+    top: 80px;
+    right: 17%;
+    width:110px;
+    min-height: 40px;
+    padding: 10px 10px 4px 10px;
+    background: linear-gradient(-10deg,#fdfdfd, #59a7fb);
+    border-radius: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+}
+
+.menuDropdown::before{
+    content: "";
+    position: absolute;
+    top: -9px;
+    right: 27px;
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(70deg,#fdfdfd, #59a7fb);
+    transform: rotate(45deg);
+}
+
+.menuDropdown ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.menuDropdown ul li{
+    padding-bottom:10px;
+}
+
+.menuDropdown ul li:hover{
+    text-decoration: underline;
+    color: #031f99;
+}
+
+.menuDropdown ul li a{
+    text-decoration: none;
+    color: #031f99;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
 
 /****************************************************************/
 

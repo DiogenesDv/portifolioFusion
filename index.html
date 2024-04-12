@@ -7,28 +7,48 @@
     <title>Meu Portifolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300&family=Silkscreen&display=swap" rel="stylesheet">
+    <script src="js.js" defer></script>
     <script src="https://kit.fontawesome.com/81fb345729.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body class="layout">
 
-    <header class="topo">
+    <header>
 
-        <div>
-            <span href="#topo" id="logo" >&ltDioDev/&gt</span>
-        </div>
-
-        <div class="btnElinksMenu">
-
+         <nav class="topo">
             <div>
-                <h2 class="glow">&ltDiógenes Oliveira/&gt</h2>
+                <span href="#topo" class="glow" id="logo" >&ltDioDev/&gt</span>
+            </div>
+    
+            <div class="btnElinksMenu">
+    
+                <div>
+                    <h2 class="glow nome">&ltDiógenes Oliveira/&gt</h2>
+                </div>
+    
+                <div>
+                    <h3 class="menuIcon"><ion-icon name="list-outline"></ion-icon></h3>
+                </div>
+    
             </div>
 
-        </div>
-
+            <div class="menuDropdown">
+                <ul>
+                    <li>
+                        <a href="#home"><ion-icon name="home-outline"></ion-icon>Home</a>
+                    </li>
+                    <li>
+                        <a href="https://diogenesdv.github.io/Site2/"><ion-icon name="desktop-outline"></ion-icon>Front-end</a>
+                    </li>
+                </ul>
+            </div>
+         </nav>
+        
     </header>
 
-    <main class="corpo">
+    <main class="corpo" id="home">
 
         <div class="textoTopo" id="topo">
 
@@ -44,9 +64,9 @@
 
             <div class="txtApresentacao" id="txt">
 
-                <h2>&ltQuem sou Eu/&gt</h2>
+                <h2 class="glow">&ltQuem sou Eu/&gt</h2>
 
-                <p class="paragrafos">
+                <p class="paragrafos glow">
                     Vamos lá, eu mim chamo Diógenes Oliveira e tenho 33 anos, sou casado, formado em Analise e
                     desenvolvimento
                     de sistemas, estou a procura de vaga júnior para meu crescimento profissional no ramo de
@@ -92,7 +112,7 @@
 
         					
         <div class="RodapenomeFinal">
-            <span>Desenvolvido por Diogenes Oliveira</span>
+            <span class="glow">Desenvolvido por Diogenes Oliveira</span>
         </div>     
     
     </footer>
